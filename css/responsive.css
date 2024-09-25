@@ -1,0 +1,37 @@
+@media screen and (max-width: 1441px) {
+  .library-items {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .library-items {
+    height: 55vh;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .library-items {
+    height: 40vh;
+  }
+
+  .header-ball-1,
+  .header-ball-2,
+  .header-ball-3 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .footer-small_ball-1 {
+    left: 65%;
+  }
+
+  .sharing_items {
+    min-width: 80%;
+  }
+  .footer-layer {
+    top: -155px;
+  }
+}

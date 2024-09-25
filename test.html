@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Container for the slider */
+      .slider-container {
+        width: 100%;
+        overflow: hidden; /* Hide overflow to show only one slide at a time */
+        position: relative;
+      }
+
+      /* Slider holding the slides */
+      .slider {
+        display: flex;
+        width: max-content; /* Allow the slider to fit all slides horizontally */
+        animation: slideLoop 10s linear infinite; /* Looping animation */
+      }
+
+      /* Individual slides */
+      .slide {
+        min-width: 100%; /* Each slide takes up full width of the container */
+        padding: 40px;
+        text-align: center;
+        font-size: 2rem;
+        background-color: lightcoral; /* Customize as needed */
+      }
+
+      /* Keyframes for infinite scrolling */
+      @keyframes slideLoop {
+        0% {
+          transform: translateX(0); /* Start at the first slide */
+        }
+        25% {
+          transform: translateX(-100%); /* Move to the second slide */
+        }
+        50% {
+          transform: translateX(-200%); /* Move to the third slide */
+        }
+        75% {
+          transform: translateX(-300%); /* Move to the fourth slide */
+        }
+        100% {
+          transform: translateX(0); /* Wrap back to the first slide */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">Div 1 Content</div>
+        <div class="slide">Div 2 Content</div>
+        <div class="slide">Div 1 Content</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="slide">Div 2 Content</div>
+        <!-- Duplicate for seamless loop -->
+      </div>
+    </div>
+  </body>
+</html>
