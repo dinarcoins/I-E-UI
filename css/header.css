@@ -1,9 +1,8 @@
 @import url(./variables.css);
 
 .header-wrapper {
-  background-image: url("../img/image.png");
+  background-image: url("../img/bg-header.png");
   background-repeat: no-repeat;
-  background-size: contain;
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -15,17 +14,17 @@
 .header-overlay {
   content: "";
   position: absolute;
+  width: 100%;
 }
 
 .header-wrapper:before {
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 0;
   background: rgb(77, 164, 91);
   background: linear-gradient(
     270deg,
-    rgba(77, 164, 91, 1) 0%,
+    #4fa55c,
     rgba(85, 167, 94, 1) 33%,
     rgba(121, 191, 142, 1) 62%,
     rgba(154, 211, 174, 1) 100%
@@ -37,7 +36,6 @@
 .header-wrapper:after {
   bottom: -200px;
   z-index: 0;
-  width: 100%;
   height: 200px;
   background: rgb(77, 164, 91);
   background: linear-gradient(
@@ -420,21 +418,6 @@
   z-index: 1;
 }
 
-/* .menu {
-  background: var(--green-color);
-  width: 100%;
-  height: 80vh;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.active-menu {
-  display: block;
-  z-index: 100;
-  position: absolute;
-} */
-
 .menu {
   background: var(--green-color);
   width: 100%;
@@ -455,8 +438,4 @@
 
 .menu-exit {
   transform: translateX(-100%); /* Slides out the menu */
-}
-
-body.no-scroll {
-  overflow: hidden; /* Prevents scrolling when the menu is open */
 }
