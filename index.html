@@ -24,6 +24,25 @@
     <div class="header-small_ball-3"></div>
     <div class="header-small_ball-2"></div>
     <div class="header-small_ball-1"></div>
+    <div class="menu p-8 md:p-5">
+      <div class="flex mb-10">
+        <img src="./img/Logo.png" alt="navbar-logo" class="responsive-image" />
+        <div class="navbar-title ml-5 text-white">
+          <p class="uppercase text-base md:text-xl whitespace-nowrap font-bold">
+            KHOA TIẾNG ITALIA
+          </p>
+          <p>Trường Đại học Hà Nội</p>
+        </div>
+      </div>
+      <ul
+        id="navbar-list_menu"
+        class="text-white z-10 whitespace-nowrap flex-col flex jusify-between font-semibold uppercase text-sm"
+      ></ul>
+      <button onclick="showMenu('close')" class="m-8 md:m-5 text-white">
+        <i class="fa-solid fa-xmark"></i>
+        Close
+      </button>
+    </div>
     <nav
       class="bg-transparent text-white flex items-center pt-8 absolute top-0 w-full justify-around m-auto"
     >
@@ -46,9 +65,8 @@
         <button class="navbar-search_button">
           <i class="fa-solid fa-magnifying-glass text-2xl"></i>
         </button>
-        <button class="hamburger lg:hidden ml-5">
+        <button class="hamburger lg:hidden ml-5" onclick="showMenu('open')">
           <i class="hamburgerIcon fa-solid fa-bars text-2xl"></i>
-          <!-- <i class="closeIcon cl fa-solid fa-x text-sm"></i> -->
         </button>
       </div>
     </nav>
@@ -303,12 +321,22 @@
           Hoạt động hợp tác trong và ngoài nước của Khoa Tiếng Italia
         </p>
       </div>
-      <div class="flex items-center flex-col md:flex-row md:mt-10">
-        <img
-          class="hidden md:w-1/2 md:flex"
-          src="./img/training.png"
-          alt="image-cooperate"
-        />
+      <div
+        class="flex items-center flex-col md:flex-row md:mt-10 lg:mt-36 justify-between"
+      >
+        <div class="cooperate_slide-show">
+          <img
+            src="./img/library-1.jpg"
+            alt="Image 1"
+            class="cooperate_slide-items cooperate_slide-active"
+          />
+          <img
+            src="./img/library-2.jpg"
+            alt="Image 2"
+            class="cooperate_slide-items"
+          />
+        </div>
+
         <div class="cooperate-slide" class="m-auto">
           <div class="cooperate-slide_box flex">
             <div
@@ -399,52 +427,84 @@
       <div class="sharing-slide">
         <div class="sharing-slide_box flex pt-20 pb-5 z-10">
           <div class="slide sharing_items">
-            <img src="./img/Logo.png" alt="" class="sharing-items_picture" />
-            <span class="text-xl font-bold my-8">
+            <img src="./img/girl-1.jpg" alt="" class="sharing-items_picture" />
+            <span
+              class="text-base md:text-xl lg:text-2xl font-bold my-1 md:my-8"
+            >
               Hành trình khám phá Italy của cô gái Việt</span
             >
-            <p class="capitalize text-base font-thin">
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
               Dung Trần có tình yêu đặc biệt dành cho Italy. Với cô, Italy là
               nơi Dung học tập để mở mang nhận thức lẫn trái tim . Cô ấn tượng
               với các công trình kiến trúc, văn hóa,
             </p>
-            <p class="font-thin text-base capitalize">01/06/2022</p>
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
+              01/06/2022
+            </p>
           </div>
           <div class="slide sharing_items">
-            <img src="./img/Logo.png" alt="" class="sharing-items_picture" />
-            <span class="text-xl font-bold my-8">
-              Hành trình khám phá Italy của cô gái Việt</span
+            <img src="./img/girl-2.jpg" alt="" class="sharing-items_picture" />
+            <span
+              class="text-base md:text-xl lg:text-2xl font-bold my-1 md:my-8"
             >
-            <p class="capitalize text-base font-thin">
-              Dung Trần có tình yêu đặc biệt dành cho Italy. Với cô, Italy là
-              nơi Dung học tập để mở mang nhận thức lẫn trái tim . Cô ấn tượng
-              với các công trình kiến trúc, văn hóa,
+              Đam mê quảng bá văn hóa Việt của nữ du học sinh Ý</span
+            >
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
+              Chia sẻ về hành trình du học của mình, Vân cho biết: "Em không có
+              ý định du học ngay từ đầu, mãi đến hè năm lớp 10 lên lớp 11 em mới
+              bắt đầu nhen nhóm ý tưởng
             </p>
-            <p class="font-thin text-base capitalize">01/06/2022</p>
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
+              01/06/2022
+            </p>
           </div>
           <div class="slide sharing_items">
-            <img src="./img/Logo.png" alt="" class="sharing-items_picture" />
-            <span class="text-xl font-bold my-8">
-              Hành trình khám phá Italy của cô gái Việt</span
+            <img src="./img/girl-3.jpg" alt="" class="sharing-items_picture" />
+            <span
+              class="text-base md:text-xl lg:text-2xl font-bold my-1 md:my-8"
             >
-            <p class="capitalize text-base font-thin">
-              Dung Trần có tình yêu đặc biệt dành cho Italy. Với cô, Italy là
-              nơi Dung học tập để mở mang nhận thức lẫn trái tim . Cô ấn tượng
-              với các công trình kiến trúc, văn hóa,
+              Nữ du học sinh Việt xinh đẹp, đạt điểm gần tuyệt đối</span
+            >
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
+              Trước khi đi du học, Linh Trang là niềm tự hào của gia đình khi
+              luôn đạt danh hiệu học sinh giỏi 12 năm liên tiếp, ngoài ra, cô
+              nàng còn từng là thành viên tích cực
             </p>
-            <p class="font-thin text-base capitalize">01/06/2022</p>
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
+              01/06/2022
+            </p>
           </div>
           <div class="slide sharing_items">
-            <img src="./img/Logo.png" alt="" class="sharing-items_picture" />
-            <span class="text-xl font-bold my-8">
+            <img src="./img/girl-4.jpg" alt="" class="sharing-items_picture" />
+            <span
+              class="text-base md:text-xl lg:text-2xl font-bold my-1 md:my-8"
+            >
               Hành trình khám phá Italy của cô gái Việt</span
             >
-            <p class="capitalize text-base font-thin">
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
               Dung Trần có tình yêu đặc biệt dành cho Italy. Với cô, Italy là
               nơi Dung học tập để mở mang nhận thức lẫn trái tim . Cô ấn tượng
               với các công trình kiến trúc, văn hóa,
             </p>
-            <p class="font-thin text-base capitalize">01/06/2022</p>
+            <p
+              class="mt-1 md:mt-5 lg:mt-8 capitalize text-sm sm:text-base md:text-lg font-thin"
+            >
+              01/06/2022
+            </p>
           </div>
         </div>
         <div class="flex justify-end mr-8 lg:mt-10">
@@ -510,7 +570,7 @@
         <div
           class="z-10 text-center text-white text-sm font-thin mt-10 md:mt-20 lg:mt-30"
         >
-          <p>Copyright 2022 - Khoa Tiếng Italia. All Rights Reserved</p>
+          <p>Copyright &copy; 2022 - Khoa Tiếng Italia. All Rights Reserved</p>
           <span class="footer-copyRight"> Powered by I&E Corp </span>
         </div>
       </div>

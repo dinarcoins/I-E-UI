@@ -163,6 +163,10 @@
   overflow: hidden;
 }
 
+.cooperate-slide {
+  width: 50%;
+}
+
 .eventNews-slide_box,
 .training-slide_box,
 .cooperate-slide_box,
@@ -356,7 +360,6 @@
   padding: 80px 50px 50px 30px;
   margin-left: 40px;
   margin-right: 40px;
-  height: 400px;
   min-width: 420px;
   position: relative;
   background-color: var(--white-color);
@@ -369,6 +372,8 @@
   width: 120px;
   height: 120px;
   z-index: 100;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .footer {
@@ -695,6 +700,7 @@
 
 .footer-copyRight {
   font-size: 8px;
+  color: var(--gray-color)
 }
 
 .footer-small_ball-1,
@@ -787,4 +793,79 @@
     transform: translateX(-100%);
     opacity: 1;
   }
+}
+
+.ourTeam_footer {
+  /* overflow: hidden; */
+  /* position: relative; */
+  padding: 100px 0;
+  border-top: 1px solid var(--black-above);
+  border-bottom: 1px solid var(--black-above);
+}
+
+.ourTeam_footer_text,
+.ourTeam_footer_text2 {
+  font-weight: 400;
+  font-size: 8.75rem;
+  line-height: 74%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-gray);
+  white-space: nowrap;
+  font-family: Abolition;
+  position: absolute;
+  /* top: 25%; */
+  transform: translateY(-50%);
+  padding-left: 150px;
+}
+
+.ourTeam_footer_text {
+  animation: textSlide 10s linear 0s infinite;
+  opacity: 0;
+}
+
+.ourTeam_footer_text2 {
+  animation: textSlide 10s linear 5s infinite;
+  opacity: 0;
+}
+
+@keyframes textSlide {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+    font-size: 4rem;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+    /* font-size: 4rem; */
+  }
+}
+
+.cooperate_slide-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cooperate_slide-items {
+  width: 250px;
+  height: 350px;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  border-radius: 8px 50px 8px 50px;
+}
+
+.cooperate_slide-active {
+  transform: scale(1.2);
+  opacity: 1;
+  z-index: 10;
+  left: 20%;
 }

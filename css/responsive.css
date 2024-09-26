@@ -8,6 +8,14 @@
   .library-items {
     height: 55vh;
   }
+
+  .slidetest {
+    left: -10%;
+  }
+
+  .cooperate_slide-active {
+    left: 10%;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -21,6 +29,14 @@
     width: 100px;
     height: 100px;
   }
+
+  .cooperate_slide-show {
+    display: none;
+  }
+
+  .cooperate-slide {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 485px) {
@@ -29,8 +45,10 @@
   }
 
   .sharing_items {
-    min-width: 80%;
+    min-width: 95%;
+    margin-left: 0;
   }
+
   .footer-layer {
     top: -155px;
   }

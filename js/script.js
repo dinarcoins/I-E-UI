@@ -108,6 +108,7 @@ const library_image = [
   },
 ];
 
+const menu = document.querySelectorAll(".menu");
 const navbar = document.getElementById("navbar-list_menu");
 const introduce = document.getElementById("introduce");
 const science = document.getElementById("science-content");
@@ -115,11 +116,13 @@ const footerLeftContent = document.getElementById("footer-left_content");
 const footerRightContent = document.getElementById("footer-right_content");
 const library_box = document.getElementById("library-box");
 const library_box2 = document.getElementById("library-box-2");
-
+const slides = document.querySelectorAll(".cooperate_slide-items");
+const totalSlides = slides.length;
 let currentSlideEventNews = 0;
 let currentSlideTraining = 0;
 let currentSlideCooperate = 0;
 let currentSlideSharing = 0;
+let currentIndex = 0;
 
 library_box.innerHTML = library_image
   .map((item) => {
@@ -170,7 +173,7 @@ introduce.innerHTML = INTRODUCE_ITEMS.map((item) => {
 science.innerHTML = SCIENCE.map((item) => {
   return `
   <div class='science-items flex text-center flex-col bg-white p-4 ${
-    item.id === 2 ? "lg:mt-10 mt-5" : "lg:mb-10 mb-5"
+    item.id === 2 ? "lg:mt-16 mt-5" : "lg:mb-16 mb-5"
   }'>
     <img src="${item.image}" alt="${item.altImage}" class="science-image">
     <p class='capitalize text-2xl font-bold md:text-base lg:text-xl mt-5'>${
@@ -198,11 +201,6 @@ footerRightContent.innerHTML = FOOTER_CONTENT_RIGHT_1.map((item) => {
   `;
 }).join("");
 
-const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger = document.querySelector(".hamburger");
-const closeIcon = document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
 
 function moveSlide(step, slideName) {
   const slide_box = document.querySelector(`.${slideName}-slide_box`);
@@ -249,4 +247,34 @@ function moveSlide(step, slideName) {
     default:
       break;
   }
+}
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("cooperate_slide-active");
+    slide.style.zIndex = 0;
+    if (i === index) {
+      slide.classList.add("cooperate_slide-active");
+      slide.style.zIndex = 10;
+    }
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  showSlide(currentIndex);
+}
+
+setInterval(nextSlide, 2500);
+showSlide(currentIndex);
+
+function showMenu(open) {
+  menu.forEach((item) => {
+    if (open === "open") {
+      item.classList.add("active-menu");
+      document.getElementsByName("body").style.overflow = "hidden";
+    } else {
+      item.classList.remove("active-menu");
+    }
+  });
 }

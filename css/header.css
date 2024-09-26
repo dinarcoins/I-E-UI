@@ -10,7 +10,9 @@
   margin-bottom: 60px;
 }
 
-.header-wrapper:before,.header-wrapper:after,.header-overlay {
+.header-wrapper:before,
+.header-wrapper:after,
+.header-overlay {
   content: "";
   position: absolute;
 }
@@ -381,20 +383,20 @@
 .header-small_ball-3 {
   top: 50%;
   left: 10%;
-  box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.75);
 }
 
 .header-small_ball-2 {
   bottom: 6%;
   left: 50%;
-  box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.75);
   opacity: 0.4;
 }
 
 .header-small_ball-1 {
   bottom: 10%;
   right: 5%;
-  box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.75);
 }
 
 .responsive-image {
@@ -416,4 +418,45 @@
   ); /* Gradient xanh lá mờ dần */
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* Hình lượn sóng */
   z-index: 1;
+}
+
+/* .menu {
+  background: var(--green-color);
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.active-menu {
+  display: block;
+  z-index: 100;
+  position: absolute;
+} */
+
+.menu {
+  background: var(--green-color);
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: none;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 100;
+}
+
+.active-menu {
+  display: block;
+  transform: translateX(0); /* Slides in the menu */
+}
+
+.menu-exit {
+  transform: translateX(-100%); /* Slides out the menu */
+}
+
+body.no-scroll {
+  overflow: hidden; /* Prevents scrolling when the menu is open */
 }
