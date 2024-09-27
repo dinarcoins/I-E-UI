@@ -2,7 +2,6 @@
 Xin Chào, mình là Nhân.
 Hiện tại project này thuộc về quyền quản lý của Công ty I&E Việt Nam.
 Team size: Only me (Front End Developer)
- -
 
 * Cấu trúc project : 
 TT1-JS_I&E  --assets
