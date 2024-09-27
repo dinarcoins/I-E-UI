@@ -411,13 +411,6 @@
   }
 }
 
-.cooperate_slide-show {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
 .cooperate_slide-items {
   width: 250px;
   height: 350px;
